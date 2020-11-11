@@ -6,12 +6,12 @@ const path = require("path");
 const app = express();
 
 // CORS for react app, assuming port 3000
-app.use(
-  cors({
-    origin: "https://tranquil-island-64380.herokuapp.com/",
-    credentials: true
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true
+//   })
+// );
 
 // read words from json file
 const fileContents = fs.readFileSync("./five-letter-words.json", "utf-8");
@@ -27,14 +27,14 @@ app.get("/", (req, res) => {
   res.send(word);
 });
 
-if (process.env.NODE_ENV === "production") {
-  // Set static folder
-  app.use(express.static("client/build"));
+// if (process.env.NODE_ENV === "production") {
+//   // Set static folder
+//   app.use(express.static("client/build"));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   });
+// }
 
 app.listen(3030, () => console.log("Word server listening on port 3030!"));
 
