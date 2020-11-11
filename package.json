@@ -1,0 +1,26 @@
+{
+  "name": "guessy-site",
+  "version": "1.0.0",
+  "description": "Guessing game to practice test driven development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevejd88/guessy-site.git"
+  },
+  "author": "Steven De Avila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevejd88/guessy-site/issues"
+  },
+  "homepage": "https://github.com/stevejd88/guessy-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "supertest": "^6.0.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
